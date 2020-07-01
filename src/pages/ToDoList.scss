@@ -1,0 +1,73 @@
+$border-color: #dfdfdf;
+
+.toDoBox {
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid $border-color;
+
+    &__header {
+        border-bottom: 1px solid $border-color;
+
+        input {
+            border: none;
+            width: 100%;
+            padding: 10px;
+
+            font-size: 18px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .toDo__item {
+        display: grid;
+        grid-template-columns: 40px auto 30px;
+        align-items: center;
+
+        padding: 12px 0;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 17px;
+            cursor: pointer;
+            transition: linear .3s;
+        }
+
+        .active {
+            text-decoration-line: line-through;
+            opacity: .5;
+        }
+
+        .tick {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+    }
+
+    &__footer {
+        text-align: center;
+        padding: 10px;
+
+        span {
+            margin: 0 10px;
+            cursor: pointer;
+            transition: linear .2s;
+        }
+
+        .active {
+            color: #f00;
+            font-weight: bold;
+        }
+    }
+}
